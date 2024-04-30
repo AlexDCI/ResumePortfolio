@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <form method="post" action="{% url 'feedback' %}">
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+            <div class="input">
+                <label class="label">
+                    <h3>{{ field.label }}</h3>
+                </label>
+            </div>
+            <div class="field">
+                {{ field }}
+            </div>
+        </div>
+        {% endfor %}
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description"></textarea><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

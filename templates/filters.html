@@ -1,0 +1,11 @@
+{% load custom_filters %}
+
+<h1>Filter</h1>
+<h2>{{ number|add:5 }}</h2>
+
+<h1>Color filter</h1>
+<p>{{ "Python"|colorize_languege|safe }}</p>
+<p>{{ "Java"|colorize_languege|safe }}</p>
+<p>{{ "JavaScript"|colorize_languege|safe }}</p>
+<p>{{ "Ruby"|colorize_languege|safe }}</p>
+<p>{{ "C++"|colorize_languege|safe }}</p>
